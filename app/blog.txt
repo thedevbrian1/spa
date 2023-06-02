@@ -1,0 +1,14 @@
+Optimistic UI
+
+What is optimistic UI?
+- Optimistic UI is the paradigm of immediately updating the UI by displaying feedback to the user following an action instead of waiting for a response from the server. e.g when deleting an item you can immediately remove it from the UI before the request is fully processed and then the UI is reconciled with the server response later.
+- Another example is incrementing a counter in a cart. You can optimistically show the new value when pressing the + before the request is completed.
+
+
+
+
+
+Optimistic UI is an approach to user interface design that aims to create a positive and seamless user experience by minimizing delays and providing instant feedback. It is based on the idea of anticipating and predicting user actions to optimize the interface's responsiveness. With optimistic UI, actions are performed immediately, even before the system processes them, giving users the impression that their interactions are fast and efficient. This approach often involves displaying temporary or cached content while waiting for the actual response, ensuring that users can continue their tasks without interruptions. By instilling a sense of optimism and smoothness, optimistic UI enhances user satisfaction and engagement, ultimately leading to a more enjoyable and productive user experience.
+Optimistic UI ensures your user interface is fast even when your network is slow.
+
+e.g Removing an element immediately from the UI when deleting
