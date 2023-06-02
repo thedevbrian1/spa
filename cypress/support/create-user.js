@@ -12,7 +12,7 @@ import { createUserSession } from "~/session.server";
 
 installGlobals();
 
-async function createAndLogin(email: string) {
+async function createAndLogin(email) {
   if (!email) {
     throw new Error("email required for login");
   }

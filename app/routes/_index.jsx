@@ -6,22 +6,23 @@ import GirlCard from "../components/GirlCard";
 import { ArrowRight } from "../components/Icon";
 import { getSession, sessionStorage } from "../session.server";
 import { useEffect, useRef } from "react";
+import { json } from "@remix-run/node";
 
 export const meta = () => [{ title: "Spa" }];
 
 export function links() {
   return [
-      {
-          rel: "stylesheet",
-          href: toastStyles
-      }
+    {
+      rel: "stylesheet",
+      href: toastStyles
+    }
   ];
 }
 
-export async function loader({request}) {
+export async function loader({ request }) {
   const session = await getSession(request);
   const successStatus = session.get('success');
-  return json({successStatus}, {
+  return json({ successStatus }, {
     headers: {
       "Set-Cookie": await sessionStorage.commitSession(session)
     }
@@ -36,25 +37,25 @@ export default function Index() {
 
   function success() {
     toastId.current = toast.success('Password reset successful! Log in with new password', {
-        position: toast.POSITION.BOTTOM_RIGHT
+      position: toast.POSITION.BOTTOM_RIGHT
     });
-}
+  }
 
-useEffect(() => {
-  if (data.successStatus === true) {
-    success();
-  }
-  return () => {
-    toast.dismiss(toastId.current);
-  }
-}, [data]);
+  useEffect(() => {
+    if (data.successStatus === true) {
+      success();
+    }
+    return () => {
+      toast.dismiss(toastId.current);
+    }
+  }, [data]);
 
   return (
     <main>
       <Hero />
       <AvailableGirls />
 
-    <ToastContainer />
+      <ToastContainer />
     </main>
   );
 }
