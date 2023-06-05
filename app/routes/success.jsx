@@ -18,7 +18,7 @@ export default function Success() {
     return (
         <main className="h-screen w-full grid place-items-center">
             <div>
-                <h1 className="text-3xl lg:text-6xl">Success</h1>
+                <h1 className="text-3xl lg:text-6xl font-semibold">Success</h1>
                 <motion.div
                 // style={{ x }}
                 // drag="x"

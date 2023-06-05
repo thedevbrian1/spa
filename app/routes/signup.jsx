@@ -177,13 +177,13 @@ export default function SignUp() {
                 ) : <>&nbsp;</>
                 }
 
-                <button type="submit" className="bg-brand-red mt-2 px-6 py-2 text-center text-white rounded">
+                <button type="submit" className="bg-green-600 mt-2 px-6 py-2 text-center text-white rounded">
                     {isSubmitting ? 'Processing...' : 'Sign up'}
                 </button>
 
             </Form>
 
-            or log in with Google
+            {/* or log in with Google */}
             <Form>
 
             </Form>

@@ -30,7 +30,7 @@ export default function ProfileIndex() {
             <div className="border border-slate-100 rounded-lg p-4 mt-8">
                 <h3 className="font-semibold">Personal information</h3>
                 <div className="flex justify-between pt-4">
-                    <div className="grid grid-cols-2 gap-4 border border-red-500 xl:w-[600px]">
+                    <div className="grid grid-cols-2 gap-4 border border-gray-100 xl:w-[600px]">
                         <div>
                             <Subtitle title='Name' />
                             <p className="mt-1">{user.girl.name}</p>
