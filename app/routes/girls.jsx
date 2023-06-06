@@ -7,9 +7,7 @@ export function meta() {
 export default function Girls() {
     return (
         <main>
-            All girls
-            1
-            2
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-center mt-28">All Girls</h1>
         </main>
     );
 }
